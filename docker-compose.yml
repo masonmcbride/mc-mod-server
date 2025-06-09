@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  mc:
+    build: .
+    container_name: mc-mod-server
+    ports:
+      - "25565:25565"
+    volumes:
+      - ./mc-data:/data
+    environment:
+      EULA: "TRUE"
+      TYPE: "FABRIC"
+      VERSION: "1.20.1"
+volumes:
+  mc-data:
+
