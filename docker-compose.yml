@@ -1,4 +1,6 @@
+# mc-mod-server/docker-compose.yml
 version: "3.8"
+
 services:
   mc:
     build: .
@@ -6,8 +8,7 @@ services:
     ports:
       - "25565:25565"
     volumes:
-      - mc-data:/data
-      - ./config:/config:ro
+      - mc-data:/data          # Docker named-volume for all world data & logs
     environment:
       EULA: "TRUE"
       TYPE: "FABRIC"
@@ -17,3 +18,4 @@ services:
 
 volumes:
   mc-data:
+
