@@ -1,0 +1,36 @@
+# flyctl launch added from docker-minecraft-server/.gitignore
+docker-minecraft-server/**/.vscode
+docker-minecraft-server/data
+docker-minecraft-server/.idea
+docker-minecraft-server/**/*.iml
+docker-minecraft-server/gh-md-toc
+docker-minecraft-server/**/personal-build-and-develop.*
+
+# flyctl launch added from docker-minecraft-server/docs/img/.gitignore
+docker-minecraft-server/docs/img/.*.bkp
+
+# flyctl launch added from docker-minecraft-server/examples/.gitignore
+docker-minecraft-server/examples/**/data
+docker-minecraft-server/examples/**/modpacks
+docker-minecraft-server/examples/**/.env
+docker-minecraft-server/examples/**/downloads
+
+# flyctl launch added from docker-minecraft-server/examples/downloads/.gitignore
+docker-minecraft-server/examples/downloads/**/*.jar
+
+# flyctl launch added from docker-minecraft-server/examples/modpacks/.gitignore
+docker-minecraft-server/examples/modpacks/**/*.zip
+
+# flyctl launch added from docker-minecraft-server/examples/one-block-modded/.gitignore
+docker-minecraft-server/examples/one-block-modded/.env
+
+# flyctl launch added from docker-minecraft-server/examples/paper/paper-build-plugins/plugins/.gitignore
+docker-minecraft-server/examples/paper/paper-build-plugins/plugins/**/*.jar
+
+# flyctl launch added from docker-minecraft-server/notes/.gitignore
+docker-minecraft-server/notes/*.bkp
+
+# flyctl launch added from docker-minecraft-server/tests/.gitignore
+docker-minecraft-server/tests/**/data
+docker-minecraft-server/tests/**/cf_api_key.secret
+fly.toml

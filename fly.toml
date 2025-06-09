@@ -1,0 +1,24 @@
+app = "mc-mod-server"
+primary_region = "sjc"
+
+[build]
+  dockerfile = "Dockerfile"
+
+[[vm]]
+  memory = "1gb"
+  cpu_kind = "shared"
+  cpus = 1
+
+# Only expose Minecraft’s TCP port
+[[services]]
+  internal_port = 25565
+  protocol = "tcp"
+
+  [[services.ports]]
+    handlers = ["tcp"]
+    port = 25565
+
+# Enable scale-to-zero
+[metrics]
+  port = 9090
+
