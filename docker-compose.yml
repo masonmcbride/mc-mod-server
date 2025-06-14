@@ -1,21 +1,17 @@
-# mc-mod-server/docker-compose.yml
 version: "3.8"
-
 services:
   mc:
-    build: .
-    container_name: mc-mod-server
+    image: itzg/minecraft-server:latest
+    container_name: mc-server
     ports:
       - "25565:25565"
-    volumes:
-      - mc-data:/data          # Docker named-volume for all world data & logs
     environment:
       EULA: "TRUE"
       TYPE: "FABRIC"
       VERSION: "1.20.1"
-      COPY_CONFIG_SRC: "/config"
-      COPY_CONFIG_DEST: "/data"
-
-volumes:
-  mc-data:
+    volumes:
+      - ./data:/data
+      - ./mods:/mods
+    tty: true
+    stdin_open: true
 
